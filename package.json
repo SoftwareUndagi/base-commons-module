@@ -1,0 +1,11 @@
+{
+  "name": "base-commons-module",
+  "version": "1.0.0",
+  "description": "Base for commons module(html, react native , server/nodejs app)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gede Sutarsa",
+  "license": "ISC"
+}

@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "target": "es2017" , 
+        "module": "system" , 
+        "experimentalDecorators": true,
+        //webpack version "target": "es6",
+        // "module": "esnext",
+        "outFile": "./dist/index.js", 
+        "declaration": true, 
+        "sourceMap": true , 
+        "jsx": "react",
+        "removeComments": false
+        
+    } , 
+    "files": [
+        "./base-commons-module.ts" 
+    ]
+}
