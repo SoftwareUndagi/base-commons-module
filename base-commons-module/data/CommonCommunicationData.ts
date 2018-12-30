@@ -3,7 +3,7 @@ import { ParameterizedSingleDataAjaxResponse as ParameterizedSingleDataAjaxRespo
 import { DataWithEditToken  as DataWithEditToken1 } from './common-communication-data/DataWithEditToken'; 
 import { CommonsAjaxResponse  as CommonsAjaxResponse1 } from './common-communication-data/CommonsAjaxResponse'; 
 import { CommonLookupHeader as CommonLookupHeader1 } from './common-communication-data/CommonLookupHeader'; 
-import { CommonLookupValue as CommonLookupValue1 } from './common-communication-data/CommonLookupValue'
+import { CommonLookupValue as CommonLookupValue1 } from './common-communication-data/CommonLookupValue' ; 
 /**
  * data untuk di pass ke server 
  */
@@ -34,7 +34,7 @@ export namespace CommonCommunicationData {
     /**
      * interface untuk lookup simple. ini bagian details
      */
-    export type CommonLookupValue  = CommonLookupValue1
+    export type CommonLookupValue  = CommonLookupValue1 ; 
 
     /**
      * di pergunakan untuk editor, pada saat add, di kirimi data lookup + token 

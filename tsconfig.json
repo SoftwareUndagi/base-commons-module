@@ -1,18 +1,33 @@
 {
     "compilerOptions": {
-        "target": "es2017" , 
-        "module": "system" , 
+        "target": "es2015" , 
+        "module": "commonjs" , 
         "experimentalDecorators": true,
         //webpack version "target": "es6",
         // "module": "esnext",
-        "outFile": "./dist/index.js", 
+        "outDir": "./build/lib",
         "declaration": true, 
-        "sourceMap": true , 
+        "declarationDir": "./build/types",
+        "sourceMap": false , 
         "jsx": "react",
-        "removeComments": false
+        "removeComments": false, 
+        "rootDir": "base-commons-module" 
         
-    } , 
-    "files": [
-        "./base-commons-module.ts" 
+    } ,
+  "exclude": [
+      "node_modules",
+      "build",
+      "scripts",
+      "acceptance-tests",
+      "webpack",
+      "jest",
+      "src/setupTests.ts",
+      "**/*.spec.ts",
+      "**/*.test.ts",
+      "config",
+      "dist", 
+      "base-commons-module.ts" , 
+      "index.ts", 
+      "tsd.d.ts"
     ]
 }

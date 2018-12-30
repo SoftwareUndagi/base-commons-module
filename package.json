@@ -2,7 +2,8 @@
   "name": "base-commons-module",
   "version": "1.0.0",
   "description": "Base for commons module(html, react native , server/nodejs app)",
-  "main": "index.js",
+  "main": "build/lib/index.js", 
+  "types": "build/types/index.d.ts"  , 
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
