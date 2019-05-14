@@ -9,9 +9,8 @@
         "declaration": true, 
         "declarationDir": "./build/types",
         "sourceMap": false , 
-        "jsx": "react",
         "removeComments": false, 
-        "rootDir": "base-commons-module" 
+        "rootDir": "src" 
         
     } ,
   "exclude": [
