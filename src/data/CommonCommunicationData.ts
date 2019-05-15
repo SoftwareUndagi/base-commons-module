@@ -1,44 +1,10 @@
-import { ParameterizedListDataAjaxResponse as ParameterizedListDataAjaxResponse1 } from './common-communication-data/ParameterizedListDataAjaxResponse';
-import { ParameterizedSingleDataAjaxResponse as ParameterizedSingleDataAjaxResponse1 } from './common-communication-data/ParameterizedSingleDataAjaxResponse';
-import { DataWithEditToken as DataWithEditToken1 } from './common-communication-data/DataWithEditToken';
-import { CommonsAjaxResponse as CommonsAjaxResponse1 } from './common-communication-data/CommonsAjaxResponse';
-import { CommonLookupHeader as CommonLookupHeader1 } from './common-communication-data/CommonLookupHeader';
-import { CommonLookupValue as CommonLookupValue1 } from './common-communication-data/CommonLookupValue';
-/**
- * data untuk di pass ke server 
- */
-export namespace CommonCommunicationData {
+import { ParameterizedListDataAjaxResponse  } from './common-communication-data/ParameterizedListDataAjaxResponse';
+import { ParameterizedSingleDataAjaxResponse } from './common-communication-data/ParameterizedSingleDataAjaxResponse';
+import { DataWithEditToken } from './common-communication-data/DataWithEditToken';
+import { CommonsAjaxResponse   } from './common-communication-data/CommonsAjaxResponse';
+import { CommonLookupHeader   } from './common-communication-data/CommonLookupHeader';
+import { CommonLookupValue  } from './common-communication-data/CommonLookupValue';
 
-
-}
-
-/**
-    * untuk data response list
-    */
-export type ParameterizedListDataAjaxResponse<DATA> = ParameterizedListDataAjaxResponse1<DATA>;
-
-/**
- * untuk response data ajax tunggal. di pakai di core ajax
- */
-export type ParameterizedSingleDataAjaxResponse<DATA> = ParameterizedSingleDataAjaxResponse1<DATA>;
-/**
- * data dengan token untuk edit. ini untuk memfetch data sekali + edit data
- */
-export type DataWithEditToken<DATA> = DataWithEditToken1<DATA>;
-/**
- * commons response dari data ajax request
- */
-export type CommonsAjaxResponse = CommonsAjaxResponse1;
-
-/**
- * header common lookup
- */
-export type CommonLookupHeader = CommonLookupHeader1;
-
-/**
- * interface untuk lookup simple. ini bagian details
- */
-export type CommonLookupValue = CommonLookupValue1;
 
 /**
  * di pergunakan untuk editor, pada saat add, di kirimi data lookup + token 
@@ -372,58 +338,6 @@ export interface EditDataWrapper<M> {
 }
 
 /**
- * param report request dari client
- */
-export interface ClientReportRequestHeader {
-
-    /**
-     * Kode dari report
-     * column : report_code
-     */
-    reportCode?: string;
-
-    /**
-     * nama file untuk download
-     * column : file_name
-     */
-    fileName?: string;
-
-    /**
-     * format report, pdf, excel atau ms word
-     * column : report_format
-     */
-    reportFormat?: string;
-
-    /**
-     * parameters dari report
-     */
-    parameters?: ClientReportRequestDetail[];
-
-}
-
-/**
- * param detail report, cross check ke jasper file
- */
-export interface ClientReportRequestDetail {
-
-    /**
-     * nama parameter dalam report
-     * column : param_name
-     */
-    paramName?: string;
-    /**
-     * tipe data, kalau ada[], berarti array
-     * column : param_type
-     */
-    paramType?: string;
-    /**
-     * parameter value, versi string
-     * column : param_value
-     */
-    paramValue?: string;
-}
-
-/**
  * request data terpaging
  */
 export interface PagedDataRequest<DATA> {
@@ -657,31 +571,4 @@ export interface LookupWithTokenResponse {
      * token untuk submit data
      */
     token: string;
-}
-
-/**
- * param untuk menerima token
- */
-export interface LookupWithToken {
-    /**
-     * nama model object
-     */
-    modelName?: string;
-    /**
-     * id dari yang hendak di edit
-     */
-    dataIdAsString?: string;
-    /**
-     * id dari lookup yang di minta 
-     */
-    lookupIds?: string[];
-    /**
-     * token yang di terima
-     */
-    onTokenAccepted?: (token: string) => any;
-    /**
-     * handler pada saat data di terima
-     */
-    onLookupAccepted: (indexedLookup: { [id: string]: CommonLookupValue[] }) => any;
-
 }
